@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="assets/styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -8,6 +9,29 @@
     <title>KidCalc</title>
 </head>
 <body>
+<div class="form-container">
+    <form class="login-form">
 
+        <label for="name">Name:</label>
+        <input id="name" placeholder="Your name here..." type="text" required maxlength="12">
+
+        <label for="dob">Birthday:</label>
+        <input id="dob" type="date" required>
+
+        <label for="theme">Favorite Theme:</label>
+        <select id="theme" required>
+            <option value="basic">Basic</option>
+            <option value="cars">Cars</option>
+            <option value="batman">Batman</option>
+            <option value="Anime">Anime</option>
+            <option value="space">Space</option>
+            <option value="disney">Disney</option>
+            <option value="cute">Cute</option>
+        </select>
+
+        <input type="submit" value="Login">
+
+    </form>
+</div>
 </body>
 </html>

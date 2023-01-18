@@ -1,0 +1,41 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+input,
+select{
+    border: 0;
+    box-shadow: 0 0 3px;
+    border-radius: 3px;
+    height: 2em;
+    margin-bottom: 15px;
+}
+
+input[type=submit] {
+    background-color: #0f06;
+}
+
+input:focus {
+    outline: none;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: #0009;
+}
+
+.login-form {
+    padding: 50px;
+    border-radius: 30px;
+    background: linear-gradient(dodgerblue, lightskyblue);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: fixed;
+}
