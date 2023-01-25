@@ -12,14 +12,14 @@
 <div class="form-container">
     <form class="login-form">
 
-        <label for="name">Name:</label>
-        <input id="name" placeholder="Your name here..." type="text" required maxlength="12">
+        <label class="name-label" for="username">Name:</label>
+        <input class="username" id="username" placeholder="Your name here..." type="text" required maxlength="12">
 
-        <label for="dob">Birthday:</label>
-        <input id="dob" type="date" required>
+        <label class="dob-label" for="dob">Birthday:</label>
+        <input class="dob" id="dob" type="date" required>
 
-        <label for="theme">Favorite Theme:</label>
-        <select id="theme" required>
+        <label class="theme-label" for="theme">Favorite Theme:</label>
+        <select class="theme" id="theme" required>
             <option value="basic">Basic</option>
             <option value="cars">Cars</option>
             <option value="batman">Batman</option>
@@ -29,9 +29,16 @@
             <option value="cute">Cute</option>
         </select>
 
-        <input type="submit" value="Login">
+        <img class="preview-image" src="/assets/images/placeholder.png" alt="theme preview">
 
+        <input type="submit" value="Login" class="submit">
     </form>
 </div>
+
+
+
+
+
+<script src="scripts/script.js"></script>
 </body>
 </html>
