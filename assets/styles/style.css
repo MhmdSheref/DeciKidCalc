@@ -24,11 +24,10 @@ input[type=submit] {
 
 .form-container {
     display: none;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    position: relative;
-    background-color: #0009;
+    width: 100vw;
+    position: fixed;
+    background-color: #0003;
 }
 
 .login-form {
@@ -48,7 +47,11 @@ input[type=submit] {
     background-color: lightskyblue;
     padding: 50px 15px 30px 15px;
     border-radius: 20px;
-    position: fixed;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
 }
 
 .name-label {
@@ -90,7 +93,7 @@ input[type=submit] {
 .calc-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 1.5fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     width: 100vw;
     max-width: 400px;
     font-size: 30px;

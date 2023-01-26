@@ -1,37 +1,69 @@
 let form = document.forms[0];
+let textBox = document.querySelector("#math-exp");
+let ansBox = document.querySelector("#math-ans");
 
 form.addEventListener("submit", saveToLocal);
 
 if (!localStorage.getItem("username")) {
-    document.querySelector(".form-container").style.display= "flex";
+    document.querySelector(".form-container").style.display= "block";
 } else {
     username= localStorage.getItem("username");
     dob= localStorage.getItem("dob");
     theme= localStorage.getItem("theme");
 }
 
-let mathExp = "5*5=";
-let mathAns = "15";
-let mathExpAns;
+form.theme.addEventListener("change" , function a () {
+    form.querySelector("img").src = `/assets/images/${form.theme.value}.css`;
+});
 
-if (mathExp.slice(-1) === "=") {
-    //this is an equation
-     mathExpAns = mathExp + "==" + mathAns;
-} else {
-    //this is an inequality
-     mathExpAns = mathExp;
+function checkAns() {
+    let mathExp = textBox.value;
+    let mathAns = ansBox.value;
+    let mathExpAns;
+
+    if (mathExp.slice(-1) === "=") {
+        //this is an equation
+        mathExpAns = mathExp + "==" + mathAns;
+    } else if (mathExp.includes(">") || mathExp.includes("<")) {
+        //this is an inequality
+        mathExpAns = mathExp;
+    } else {
+        return;
+    }
+
+    try {
+        if (eval(mathExpAns)){
+            //correct answer
+            textBox.value = "Correct Answer!";
+        } else {
+            //wrong answer
+            textBox.value = "Try Again! :(";
+        }
+    } catch  {
+        textBox.value = "Format Error"
+    }
+
+    setTimeout(clearTxt, 1000);
 }
 
-if (eval(mathExpAns)){
-    //correct answer
-    console.log("correct answer");
-} else {
-    //wrong answer
-    console.log("wrong answer");
+function clearTxt() {
+    textBox.value = "";
+    ansBox.value = "";
 }
 
+function addToTextBox (a) {
+    let selected = textBox;
+    let maxChar = 12;
 
+    if (textBox.value.slice(-1) === "=") {
+        selected = ansBox;
+        maxChar = 4;
+    }
 
+    if (selected.value.length < maxChar) {
+        selected.value += a.innerText;
+    }
+}
 
 function saveToLocal () {
     localStorage.setItem("username", form.username.value);
@@ -44,4 +76,3 @@ function calcAge (date) {
     let currentDate = new Date();
     return Math.floor((currentDate - birthDate) / 31556952000);
 }
-

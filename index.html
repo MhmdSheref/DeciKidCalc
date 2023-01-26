@@ -37,28 +37,33 @@
 <div class="calc-container">
         <textarea id="math-exp" cols="16" rows="1" readonly></textarea>
         <textarea id="math-ans" cols="8" rows="1" readonly></textarea>
-        <button class="numpad number" id="num-1">1</button>
-        <button class="numpad number" id="num-2">2</button>
-        <button class="numpad number" id="num-3">3</button>
-        <button class="numpad equation" id="equal">=</button>
-        <button class="numpad number" id="num-4">4</button>
-        <button class="numpad number" id="num-5">5</button>
-        <button class="numpad number" id="num-6">6</button>
-        <button class="numpad equation" id="greater-than">></button>
-        <button class="numpad number" id="num-7">7</button>
-        <button class="numpad number" id="num-8">8</button>
-        <button class="numpad number" id="num-9">9</button>
-        <button class="numpad equation" id="less-than"><</button>
-        <button class="numpad number" id="num-0">0</button>
-        <button class="numpad operator" id="plus">+</button>
-        <button class="numpad operator" id="minus">-</button>
-        <button class="numpad sub" id="submit">submit</button>
+
+        <button class="numpad number" id="num-1" onclick="addToTextBox(this)">1</button>
+        <button class="numpad number" id="num-2" onclick="addToTextBox(this)">2</button>
+        <button class="numpad number" id="num-3" onclick="addToTextBox(this)">3</button>
+
+        <button class="numpad equation" id="equal" onclick="addToTextBox(this)">=</button>
+
+        <button class="numpad number" id="num-4" onclick="addToTextBox(this)">4</button>
+        <button class="numpad number" id="num-5" onclick="addToTextBox(this)">5</button>
+        <button class="numpad number" id="num-6" onclick="addToTextBox(this)">6</button>
+
+        <button class="numpad equation" id="greater-than" onclick="addToTextBox(this)">></button>
+
+        <button class="numpad number" id="num-7" onclick="addToTextBox(this)">7</button>
+        <button class="numpad number" id="num-8" onclick="addToTextBox(this)">8</button>
+        <button class="numpad number" id="num-9" onclick="addToTextBox(this)">9</button>
+
+        <button class="numpad equation" id="less-than" onclick="addToTextBox(this)"><</button>
+
+        <button class="numpad number" id="num-0" onclick="addToTextBox(this)">0</button>
+
+        <button class="numpad operator" id="plus" onclick="addToTextBox(this)">+</button>
+        <button class="numpad operator" id="minus" onclick="addToTextBox(this)">-</button>
+
+        <button class="numpad sub" id="submit" onclick="checkAns()">submit</button>
+        <button class="numpad clear" id="clear" onclick="clearTxt()">clear</button>
 </div>
-
-
-
-
-
 <script src="scripts/script.js"></script>
 </body>
 </html>
