@@ -85,6 +85,40 @@ input[type=submit] {
     border-radius: 10px;
 }
 
+/*===========================================================================*/
+
+.calc-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.5fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 100vw;
+    max-width: 400px;
+    font-size: 30px;
+}
+
+#math-exp {
+    grid-area: 1 / 1 / 1 / 4;
+    resize: none;
+}
+
+#math-ans {
+    resize: none;
+}
+
+.calc-container * {
+    font-size: inherit;
+}
+
+.exp-ans-cont {
+    display: flex;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+/*===========================================================================*/
+
 @media screen and (max-width: 768px) {
     .preview-image {
         display: none;
