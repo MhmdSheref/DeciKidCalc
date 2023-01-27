@@ -90,7 +90,24 @@ input[type=submit] {
 
 /*===========================================================================*/
 
-.calc-container {
+.info-bar {
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+/*===========================================================================*/
+
+.calc {
+    margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr) 1.5fr;
     grid-template-rows: repeat(6, 1fr);
@@ -101,14 +118,14 @@ input[type=submit] {
 
 #math-exp {
     grid-area: 1 / 1 / 1 / 4;
-    resize: none;
+    min-width: 0;
 }
 
 #math-ans {
-    resize: none;
+    min-width: 0;
 }
 
-.calc-container * {
+.calc * {
     font-size: inherit;
 }
 
@@ -116,7 +133,7 @@ input[type=submit] {
     display: flex;
 }
 
-textarea:focus {
+input:focus {
     outline: none;
 }
 

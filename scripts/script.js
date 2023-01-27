@@ -1,21 +1,42 @@
+//Code for login form
+
 let form = document.forms[0];
-let textBox = document.querySelector("#math-exp");
-let ansBox = document.querySelector("#math-ans");
 
 form.addEventListener("submit", saveToLocal);
 
-if (!localStorage.getItem("username")) {
-    document.querySelector(".form-container").style.display= "block";
-} else {
+if (localStorage.getItem("username")) {
     username= localStorage.getItem("username");
     dob= localStorage.getItem("dob");
     theme= localStorage.getItem("theme");
+} else {
+    //only prompt for login when there isnt any data stored
+    document.querySelector(".form-container").style.display= "block";
 }
 
-form.theme.addEventListener("change" , function a () {
+form.theme.addEventListener("change" , function () {
+    //preview image when selecting theme
     form.querySelector("img").src = `/assets/images/${form.theme.value}.css`;
 });
 
+
+
+function saveToLocal () {
+    localStorage.setItem("username", form.username.value);
+    localStorage.setItem("dob", form.dob.value);
+    localStorage.setItem("theme", form.theme.value);
+}
+
+function calcAge (date) {
+    let birthDate = new Date(date);
+    let currentDate = new Date();
+    return Math.floor((currentDate - birthDate) / 31556952000);
+}
+
+// =========================================================================== //
+//code for calculator
+
+let textBox = document.querySelector("#math-exp");
+let ansBox = document.querySelector("#math-ans");
 function checkAns() {
     let mathExp = textBox.value;
     let mathAns = ansBox.value;
@@ -51,7 +72,7 @@ function clearTxt() {
     ansBox.value = "";
 }
 
-function addToTextBox (a) {
+function addToTextBox (pressedBtn) {
     let selected = textBox;
     let maxChar = 12;
 
@@ -61,18 +82,6 @@ function addToTextBox (a) {
     }
 
     if (selected.value.length < maxChar) {
-        selected.value += a.innerText;
+        selected.value += pressedBtn.innerText;
     }
-}
-
-function saveToLocal () {
-    localStorage.setItem("username", form.username.value);
-    localStorage.setItem("dob", form.dob.value);
-    localStorage.setItem("theme", form.theme.value);
-}
-
-function calcAge (date) {
-    let birthDate = new Date(date);
-    let currentDate = new Date();
-    return Math.floor((currentDate - birthDate) / 31556952000);
 }
