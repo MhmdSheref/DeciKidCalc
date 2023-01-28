@@ -91,17 +91,46 @@ input[type=submit] {
 /*===========================================================================*/
 
 .info-bar {
+    font-size: 1.3rem;
     height: 100px;
-    background-color: red;
+    background-color: gray;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-h1,
-h2,
-h3 {
-    margin: 0;
+.data {
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.settings-icon {
+    padding: 10px;
+}
+
+.settings {
+    position: fixed;
+    display: none;
+    left: 150px;
+    top: 100px;
+    flex-direction: column;
+    background-color: deepskyblue;
+}
+
+
+#hidden-checkbox {
+    display: none;
+}
+
+#hidden-checkbox:checked ~ .settings {
+    display: flex;
 }
 
 /*===========================================================================*/
@@ -164,4 +193,19 @@ input:focus {
         max-width: 250px;
     }
 
+}
+
+@media screen and (max-width: 480px) {
+    .info-bar {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .settings {
+        position: static;
+        display: none;
+        flex-direction: column;
+        background-color: transparent;
+    }
 }

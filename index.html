@@ -36,12 +36,39 @@
 </div>
 
 <header class="info-bar">
-    <div>
-        <h1>Welcome back, ${Name}!</h1>
-        <h2>days until birthday: </h2>
-    </div>
-    <h1> Score:</h1>
-    <img src="assets/images/settings.svg" alt="settings">
+        <div class="data">
+            <span>Welcome back, Mohamed Sheref</span>
+            <span>5 days until birthday</span>
+        </div>
+        <div class="score">
+            <span>score</span>
+            <span>10</span>
+        </div>
+        <label for="hidden-checkbox" class="settings-icon">
+            <img src="assets/images/settings.svg" alt="settings">
+        </label>
+
+    <input type="checkbox" id="hidden-checkbox">
+        <form class="settings">
+            <label class="name-label" for="change-username">Name:</label>
+            <input class="username" id="change-username" placeholder="Your name here..." type="text" maxlength="12">
+
+            <label class="dob-label" for="change-dob">Birthday:</label>
+            <input class="dob" id="change-dob" type="date">
+
+            <label class="theme-label" for="change-theme">Favorite Theme:</label>
+            <select class="theme" id="change-theme">
+                <option value="basic">Basic</option>
+                <option value="cars">Cars</option>
+                <option value="batman">Batman</option>
+                <option value="Anime">Anime</option>
+                <option value="space">Space</option>
+                <option value="disney">Disney</option>
+                <option value="cute">Cute</option>
+            </select>
+
+            <input type="submit" value="Change" class="submit">
+        </form>
 </header>
 
 <div class="calc">
