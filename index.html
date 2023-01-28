@@ -37,12 +37,12 @@
 
 <header class="info-bar">
         <div class="data">
-            <span>Welcome back, Mohamed Sheref</span>
-            <span>5 days until birthday</span>
+            <div>Welcome back, <span id="name-text">Friend</span>!</div>
+            <div>Age: <span id="age-text"></span></div>
         </div>
         <div class="score">
             <span>score</span>
-            <span>10</span>
+            <span id="score-text">0</span>
         </div>
         <label for="hidden-checkbox" class="settings-icon">
             <img src="assets/images/settings.svg" alt="settings">
@@ -50,14 +50,14 @@
 
     <input type="checkbox" id="hidden-checkbox">
         <form class="settings">
-            <label class="name-label" for="change-username">Name:</label>
-            <input class="username" id="change-username" placeholder="Your name here..." type="text" maxlength="12">
+            <label class="name-label" for="changeUsername">Name:</label>
+            <input class="username" id="changeUsername" placeholder="Your name here..." type="text" maxlength="12">
 
-            <label class="dob-label" for="change-dob">Birthday:</label>
-            <input class="dob" id="change-dob" type="date">
+            <label class="dob-label" for="changeDob">Birthday:</label>
+            <input class="dob" id="changeDob" type="date">
 
-            <label class="theme-label" for="change-theme">Favorite Theme:</label>
-            <select class="theme" id="change-theme">
+            <label class="theme-label" for="changeTheme">Favorite Theme:</label>
+            <select class="theme" id="changeTheme">
                 <option value="basic">Basic</option>
                 <option value="cars">Cars</option>
                 <option value="batman">Batman</option>

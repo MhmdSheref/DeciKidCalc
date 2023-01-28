@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+}
+
+.basic {
+    color: black;
+    --header-color: #0005;
+    --numpad-color: lightblue;
+    --operator-color: #4ec0e5;
+    background: linear-gradient(white, gray);
+}
+
+.cars {
+
+}
+
+.batman {
+
+}
+
+.anime {
+
+}
+
+.space {
+    --header-color: #000c;
+    background: url("/assets/images/space.jpg");
+    --numpad-color: purple;
+    --operator-color: #4d004d;
+    color: white;
+}
+
+.disney {
+    background: url("/assets/images/disney.jpg");
+}
+
+.cute {
+
+}

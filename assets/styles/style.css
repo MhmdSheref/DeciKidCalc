@@ -1,3 +1,5 @@
+@import "themes.css";
+
 body {
     padding: 0;
     margin: 0;
@@ -93,13 +95,14 @@ input[type=submit] {
 .info-bar {
     font-size: 1.3rem;
     height: 100px;
-    background-color: gray;
+    background-color: var(--header-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .data {
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -113,12 +116,13 @@ input[type=submit] {
 
 .settings-icon {
     padding: 10px;
+    color: white;
 }
 
 .settings {
     position: fixed;
     display: none;
-    left: 150px;
+    right: 0;
     top: 100px;
     flex-direction: column;
     background-color: deepskyblue;
@@ -165,6 +169,44 @@ input[type=submit] {
 input:focus {
     outline: none;
 }
+
+.numpad {
+    color: inherit;
+    background-color: var(--numpad-color);
+    margin: 1px 1px;
+    box-shadow: 0 0 3px black;
+    border: none;
+    cursor: pointer;
+}
+
+.sub {
+    background-color: #00cc33;
+}
+
+.equation {
+    background-color: var(--operator-color);
+}
+
+.clear {
+    background-color: #ff553e;
+}
+
+.operator {
+    background-color: var(--operator-color);
+}
+
+.numpad:hover {
+    filter: brightness(110%);
+}
+
+.numpad:active {
+    box-shadow: 0 0 0;
+    filter: brightness(95%);
+}
+
+
+
+
 
 /*===========================================================================*/
 
