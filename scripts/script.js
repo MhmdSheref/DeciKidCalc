@@ -19,7 +19,7 @@ if (localStorage.getItem("username")) {
 
 form.theme.addEventListener("change" , function () {
     //preview image when selecting theme
-    form.querySelector("img").src = `/assets/images/${form.theme.value}-preview.jpg`;
+    form.querySelector("img").src = `assets/images/${form.theme.value}-preview.png`;
 });
 
 function saveToLocal () {
